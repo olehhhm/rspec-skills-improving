@@ -9,4 +9,6 @@ class Product < ApplicationRecord
   validates :is_private, exclusion: [nil]
   validates :file1, presence: true
 
+  mount_uploader :file1, FileUploader
+  mount_uploader :file2, ImageUploader
 end
